@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <title> PCF - Recuperar senha. </title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style type="text/css">
+
+      /* Determinando dimensões e borda para fins de testes iniciais. */
+      body {
+        position: absolute;
+        width: 360px;
+        height: 640px;
+        color: #FFFFFF;
+        border: 1px solid #000000;
+      }
+
+      /* Setando posição, efeito e estilo dos ícones e do fundo do cabeçalho. */
+      .cabecalho {
+        position: absolute;
+        width: 360px;
+        height: 76px;
+        left: 0px;
+        top: 0px;
+        background: #E8E8E8;
+      }
+
+      .icone-voltar {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 11px;
+        top: 13px;
+        border: 0px;
+        background: #E8E8E8;
+      }
+
+      /* Determinando estilo e dimensões dos títulos, subtítulos e descrição a serem mostrados na página. */
+      .titulo {
+        position: absolute;
+        width: 209px;
+        height: 22px;
+        left: 76px;
+        top: 27px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 18px;
+        text-align: center;
+        color: #619648;
+      }
+
+      .subtitulo {
+        position: absolute;
+        width: 262px;
+        height: 30px;
+        left: 35px;
+        top: 138px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 24px;
+        color: #000000;
+      }
+
+      /* Determinando posições, cor e dimensões dos campos de preenchimento. */
+      .primeiro-campo-de-entrada {
+        position: absolute;
+        width: 246px;
+        height: 76px;
+        left: 57px;
+        top: 241px;
+        background: #EBEBEB;
+        border: 1px solid #229434;
+        box-sizing: border-box;
+      }
+
+      .primeira-linha {
+        position: absolute;
+        width: 246px;
+        height: 0px;
+        left: 57px;
+        top: 279px;
+        border-bottom: 1px solid #229434;
+      }
+
+      .segundo-campo-de-entrada {
+        position: absolute;
+        width: 246px;
+        height: 76px;
+        left: 57px;
+        top: 316px;
+        background: #EBEBEB;
+        border: 1px solid #229434;
+        box-sizing: border-box;
+      }
+
+      .segunda-linha {
+        position: absolute;
+        width: 246px;
+        height: 0px;
+        left: 57px;
+        top: 354px;
+        border-bottom: 1px solid #229434;
+      }
+
+      .terceiro-campo-de-entrada {
+        position: absolute;
+        width: 246px;
+        height: 76px;
+        left: 57px;
+        top: 391px;
+        background: #EBEBEB;
+        border: 1px solid #229434;
+        box-sizing: border-box;
+      }
+
+      .terceira-linha {
+        position: absolute;
+        width: 246px;
+        height: 0px;
+        left: 57px;
+        top: 429px;
+        border-bottom: 1px solid #229434;
+      }
+
+      /* Estilizando o botão RECUPERAR SENHA e estabelecendo interações da inércia à ativação do mesmo. */
+      .botao-cadastrar {
+        position: absolute;
+        width: 246px;
+        height: 49px;
+        left: 57px;
+        top: 535px;
+        background: #619648;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 18px;
+        border: 0px;
+        color: #FFFFFF;
+        transition-duration: 100ms;
+      }
+
+      .botao-cadastrar:hover {
+        background: #55853F;
+        cursor: pointer;
+      }
+
+      .botao-cadastrar:active {
+        background: #476E34;
+      }
+
+      /* Determinando estilo e dimensões das entradas de e-mail e senha. */
+      .entrada-e-mail {
+        position: absolute;
+        width: 203px;
+        height: 16px;
+        left: 76px;
+        top: 251px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        border: #FFFFFF;
+        color: #000000;
+        background: #EBEBEB;
+      }
+
+      .entrada-confirmar-e-mail {
+        position: absolute;
+        width: 203px;
+        height: 16px;
+        left: 76px;
+        top: 289px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        border: #FFFFFF;
+        color: #000000;
+        background: #EBEBEB;
+      }
+
+      .entrada-senha {
+        position: absolute;
+        width: 203px;
+        height: 16px;
+        left: 76px;
+        top: 327px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        border: #FFFFFF;
+        color: #000000;
+        background: #EBEBEB;
+      }
+
+      .entrada-confirmar-senha {
+        position: absolute;
+        width: 203px;
+        height: 16px;
+        left: 76px;
+        top: 365px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        border: #FFFFFF;
+        color: #000000;
+        background: #EBEBEB;
+      }
+
+      .entrada-titular {
+        position: absolute;
+        width: 203px;
+        height: 16px;
+        left: 76px;
+        top: 403px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        border: #FFFFFF;
+        color: #000000;
+        background: #EBEBEB;
+      }
+
+      .entrada-fazenda {
+        position: absolute;
+        width: 203px;
+        height: 16px;
+        left: 76px;
+        top: 441px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        border: #FFFFFF;
+        color: #000000;
+        background: #EBEBEB;
+      }
+
+      /* Removendo sublinhado e cor padrão dos links <a> link </a>. */
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Retângulo para plano de fundo do cabeçalho e ícones laterais. -->
+    <div class="cabecalho"></div>
+    <a href="entrada.html#inicio">
+      <button class="icone-voltar">
+        <img src="voltar.png">
+      </button>
+    </a>
+
+    <!-- Títulos e subtítulos. -->
+    <div class="titulo"> Cadastre-se </div>
+    <div class="subtitulo"> Quer cadastrar sua fazenda? </div>
+
+    <!-- Retângulos para preenchimento. -->
+    <div class="primeiro-campo-de-entrada"></div>
+    <div class="primeira-linha"></div>
+    <div class="segundo-campo-de-entrada"></div>
+    <div class="segunda-linha"></div>
+    <div class="terceiro-campo-de-entrada"></div>
+    <div class="terceira-linha"></div>
+
+    <!-- Botão CADASTRAR. -->
+    <a href="#">
+      <button type="button" class="botao-cadastrar"> Cadastrar </button>
+    </a>
+
+    <!-- Entradas <input>. -->
+    <input type="emailadress" placeholder="E-mail..." class="entrada-e-mail">
+    <input type="emailadress" placeholder="Confirmar e-mail..." class="entrada-confirmar-e-mail">
+    <input type="password" placeholder="Senha..." class="entrada-senha">
+    <input type="password" placeholder="Confirmar senha..." class="entrada-confirmar-senha">
+    <input type="text" placeholder="Titular da fazenda..." class="entrada-titular">
+    <input type="text" placeholder="Nome da fazenda..." class="entrada-fazenda">
+
+  </body>
+
+</html>

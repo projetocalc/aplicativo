@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+
+<html lang="pt-br">
+
+  <head>
+    <meta charset="utf-8">
+    <title> PCF - Recuperar senha. </title>
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <style type="text/css">
+
+      /* Determinando dimensões e borda para fins de testes iniciais. */
+      body {
+        position: absolute;
+        width: 360px;
+        height: 640px;
+        color: #FFFFFF;
+        border: 1px solid #000000;
+      }
+
+      /* Setando posição, efeito e estilo dos ícones e do fundo do cabeçalho. */
+      .cabecalho {
+        position: absolute;
+        width: 360px;
+        height: 76px;
+        left: 0px;
+        top: 0px;
+        background: #E8E8E8;
+      }
+
+      .icone-voltar {
+        position: absolute;
+        width: 50px;
+        height: 50px;
+        left: 11px;
+        top: 13px;
+        border: 0px;
+        background: #E8E8E8;
+      }
+
+      /* Determinando estilo e dimensões dos títulos, subtítulos e descrição a serem mostrados na página. */
+      .titulo {
+        position: absolute;
+        width: 209px;
+        height: 22px;
+        left: 76px;
+        top: 27px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 18px;
+        text-align: center;
+        color: #619648;
+      }
+
+      .subtitulo {
+        position: absolute;
+        width: 262px;
+        height: 30px;
+        left: 35px;
+        top: 138px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 500;
+        line-height: normal;
+        font-size: 24px;
+        color: #000000;
+      }
+
+      .descricao {
+        position: absolute;
+        left: 35px;
+        right: 35px;
+        top: 189px;
+        bottom: 394px;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: 300;
+        line-height: 15px;
+        font-size: 13px;
+        text-align: justify;
+        color: #626262;
+      }
+
+      /* Determinando posições, cor e dimensões dos campos de preenchimento. */
+      .campos-de-entrada {
+        position: absolute;
+        width: 246px;
+        height: 76px;
+        left: 57px;
+        top: 301px;
+        background: #EBEBEB;
+        border: 1px solid #229434;
+        box-sizing: border-box;
+      }
+
+      .linha {
+        position: absolute;
+        width: 246px;
+        height: 0px;
+        left: 57px;
+        top: 339px;
+        border-bottom: 1px solid #229434;
+      }
+
+      /* Estilizando o botão RECUPERAR SENHA e estabelecendo interações da inércia à ativação do mesmo. */
+      .botao-recuperar {
+        position: absolute;
+        width: 246px;
+        height: 49px;
+        left: 57px;
+        top: 433px;
+        background: #619648;
+        font-family: Montserrat;
+        font-style: normal;
+        font-weight: normal;
+        line-height: normal;
+        font-size: 18px;
+        border: 0px;
+        color: #FFFFFF;
+        transition-duration: 100ms;
+      }
+
+      .botao-recuperar:hover {
+        background: #55853F;
+        cursor: pointer;
+      }
+
+      .botao-recuperar:active {
+        background: #476E34;
+      }
+
+      /* Determinando estilo e dimensões das entradas de e-mail e senha. */
+      .entrada-e-mail {
+        position: absolute;
+        width: 203px;
+        height: 16px;
+        left: 76px;
+        top: 311px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        border: #FFFFFF;
+        color: #000000;
+        background: #EBEBEB;
+      }
+
+      .entrada-senha {
+        position: absolute;
+        width: 203px;
+        height: 16px;
+        left: 76px;
+        top: 349px;
+        font-family: Montserrat, sans-serif;
+        font-style: normal;
+        font-weight: 600;
+        line-height: normal;
+        font-size: 13px;
+        border: #FFFFFF;
+        color: #000000;
+        background: #EBEBEB;
+      }
+
+      /* Removendo sublinhado e cor padrão dos links <a> link </a>. */
+      a:link {
+        text-decoration: none;
+      }
+
+      a:visited {
+        color: white;
+      }
+
+    </style>
+  </head>
+
+  <body>
+
+    <!-- Retângulo para plano de fundo do cabeçalho e ícones laterais. -->
+    <div class="cabecalho"></div>
+    <a href="entrada.html#inicio">
+      <button class="icone-voltar">
+        <img src="voltar.png">
+      </button>
+    </a>
+
+    <!-- Títulos e subtítulos. -->
+    <div class="titulo"> Recuperação de senha </div>
+    <div class="subtitulo"> Esqueceu sua senha? </div>
+    <div class="descricao"> Por favor, insira nos campos abaixo seu e-mail principal e a última senha da qual se recorda. Você receberá, em alguns instantes, uma mensagem em sua caixa de entrada com uma nova senha. </div>
+
+    <!-- Retângulos para e-mail e senha. -->
+    <div class="campos-de-entrada"></div>
+    <div class="linha"></div>
+
+    <!-- Botão RECUPERAR SENHA. -->
+    <a href="#">
+      <button type="button" class="botao-recuperar"> Recuperar senha </button>
+    </a>
+
+    <!-- Entrada <input> para e-mail e senha. -->
+    <input type="emailadress" placeholder="E-mail..." class="entrada-e-mail">
+    <input type="password" placeholder="Senha..." class="entrada-senha">
+
+  </body>
+
+</html>
